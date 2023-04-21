@@ -41,7 +41,7 @@ router.post("/:cid/product/:pid", function (req, res) {
     return;
   }
   // Buscar el producto correspondiente en el array de productos
-  const productIndex = products.findIndex((e) => e.id === parseInt(productId));
+  const productIndex = products.findIndex((p) => p.id === parseInt(productId));
   if (productIndex === -1) {
     res.status(404).send("product not found.");
     return;

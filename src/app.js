@@ -1,5 +1,4 @@
 import express from "express";
-import fs from "fs";
 
 //import de router:
 import productsRouter from "./routes/products.router.js";
