@@ -49,15 +49,7 @@ router.get("/:pid", (req, res) => {
 router.post("/", (req, res) => {
   const { title, description, price, thumbnails, code, stock, category } =
     req.body;
-  if (
-    !title ||
-    !description ||
-    !price ||
-    !thumbnails ||
-    !code ||
-    !stock ||
-    !category
-  ) {
+  if (!title || !description || !price || !code || !stock || !category) {
     return res
       .status(400)
       .send({ status: "error", error: "valores incompletos." });
